@@ -44,16 +44,33 @@ const BusList = () => {
 
         // Muestra el detalle del bus usando SweetAlert2
         Swal.fire({
-          title: 'Detalles del Bus',
+          title: 'DETALLES DEL BUS',
           html: `
-            <p><strong>Número:</strong> ${data.numeroBus}</p>
-            <p><strong>Placa:</strong> ${data.placa}</p>
-            <p><strong>Características:</strong> ${data.caracteristicas}</p>
-            <p><strong>Fecha de Creación:</strong> ${new Date(data.fechaCreacion).toLocaleString()}</p>
-            <p><strong>Activo:</strong> ${data.activo ? 'Sí' : 'No'}</p>
+            <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.5;">
+              <div style="margin-bottom: 10px;">
+                <strong>Número:</strong> <span>${data.numeroBus}</span>
+              </div>
+              <div style="margin-bottom: 10px;">
+                <strong>Placa:</strong> <span>${data.placa}</span>
+              </div>
+              <div style="margin-bottom: 10px;">
+                <strong>Características:</strong> <span>${data.caracteristicas}</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.5;">
+              <div style="margin-bottom: 10px;">
+                <strong>Fecha de Creación:</strong> <span>${new Date(data.fechaCreacion).toLocaleDateString()}</span>
+              </div>
+            </div>
+              <div style="margin-bottom: 10px;">
+                <strong>Activo:</strong> <span>${data.activo ? 'Sí' : 'No'}</span>
+              </div>
+            </div>
           `,
-          icon: 'info',
-          confirmButtonText: 'Aceptar'
+          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyeRAH5etfyn0B4WAQ0bRSnzF96Oj9OFiyNw&s',
+          confirmButtonText: 'Aceptar',
+          customClass: {
+            confirmButton: 'confirm-btn-green' // Aplicar la clase personalizada
+          }
         });
       })
       .catch((error) => Swal.fire('Error', error.message, 'error'));
@@ -64,7 +81,7 @@ const BusList = () => {
 
   return (
     <div className="bus-container">
-      <h2>Lista de Buses</h2>
+      <h2>LISTA DE BUSES</h2>
       <table className="bus-table">
         <thead>
           <tr>
@@ -89,7 +106,7 @@ const BusList = () => {
                 <td>{bus.numeroBus}</td>
                 <td>{bus.placa}</td>
                 <td>{bus.caracteristicas}</td>
-                <td>{new Date(bus.fechaCreacion).toLocaleString()}</td>
+                <td>{new Date(bus.fechaCreacion).toLocaleDateString()}</td>
                 <td>{bus.activo ? "Activo" : "Inactivo"}</td>
                 <td>
                   <button className="view-details-btn" onClick={() => handleViewDetails(bus.id)}>

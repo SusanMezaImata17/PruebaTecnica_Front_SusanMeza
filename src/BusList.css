@@ -53,8 +53,15 @@
     transition: background-color 0.3s ease;
   }
   
-  .view-details-btn:hover {
-    background-color: #0056b3;
+  .confirm-btn-green {
+    background-color: #28a745;  /* Verde */
+    color: white; /* Texto blanco */
+    border: none;
+    font-weight: bold;
+  }
+  
+  .confirm-btn-green:hover {
+    background-color: #218838;  /* Verde más oscuro al pasar el mouse */
   }
   
   /* Estilo para los controles de paginación */
