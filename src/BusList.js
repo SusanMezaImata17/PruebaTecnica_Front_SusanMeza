@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Swal from "sweetalert2";  // Importa SweetAlert2
+import Swal from "sweetalert2";  
 import './BusList.css';
 
 const BusList = () => {
@@ -39,10 +39,10 @@ const BusList = () => {
         return response.json();
       })
       .then((data) => {
-        // Cambia el título de la página cuando se vean los detalles
+        
         document.title = `Detalles del Bus ${data.numeroBus}`;
 
-        // Muestra el detalle del bus usando SweetAlert2
+        
         Swal.fire({
           title: 'DETALLES DEL BUS',
           html: `
@@ -69,7 +69,7 @@ const BusList = () => {
           imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyeRAH5etfyn0B4WAQ0bRSnzF96Oj9OFiyNw&s',
           confirmButtonText: 'Aceptar',
           customClass: {
-            confirmButton: 'confirm-btn-green' // Aplicar la clase personalizada
+            confirmButton: 'confirm-btn-green' 
           }
         });
       })

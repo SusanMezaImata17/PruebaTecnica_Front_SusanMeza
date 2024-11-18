@@ -15,7 +15,7 @@
     margin-bottom: 20px;
   }
   
-  /* Estilo para la tabla */
+  /* Tabla */
   .bus-table {
     width: 100%;
     border-collapse: collapse;
@@ -42,7 +42,7 @@
     background-color: #f2f2f2;
   }
   
-  /* Estilo para el botón "Ver Detalles" */
+  /* Botón "Ver Detalles" */
   .view-details-btn {
     padding: 8px 16px;
     background-color: #007bff;
@@ -54,17 +54,17 @@
   }
   
   .confirm-btn-green {
-    background-color: #28a745;  /* Verde */
-    color: white; /* Texto blanco */
+    background-color: #28a745;  
+    color: white; 
     border: none;
     font-weight: bold;
   }
   
   .confirm-btn-green:hover {
-    background-color: #218838;  /* Verde más oscuro al pasar el mouse */
+    background-color: #218838;  
   }
   
-  /* Estilo para los controles de paginación */
+  /* Controles de paginación */
   .pagination-controls {
     display: flex;
     justify-content: center;
